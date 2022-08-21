@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,700&family=Montserrat:wght@400;700&family=Outfit:wght@300;400;600;700&family=Poppins:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+  --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+  --Very-dark-blue-line: hsl(216, 56%, 65%);
+  --subtitle-color: hsl(215, 37%, 81%);
+  --headers-color: greenyellow;
+  --White: hsl(0, 0%, 100%);
+  --spacing: 20px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--Very-dark-blue-main-BG);
+  font-family: 'Outfit', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--Very-dark-blue-line);
+}
+
+.menu-nav {
+  background: var(--Very-dark-blue-card-BG);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.logo img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid var(--headers-color);
+  object-fit: cover;
+}
+
+.links li {
+  list-style: none;
+  margin-right: 10px;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+}
+
+
+.links a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+  color: var(--headers-color)
+}
+
+.hero {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  background-image: url(images/perro_estudiando.png);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: var(--White)
+}
+
+.text-container {
+  background: rgba(0, 0, 0, .3);
+  padding: var(--spacing);
+  text-align: center;
+}
+
+h1 {
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.text-container .paragraph {
+  text-align: center;
+}
+
+.section {
+  width: 100%;
+  padding: var(--spacing);
+}
+
+.container {
+  height: 100%;
+}
+
+.container.history {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 40px;
+  color: var(--headers-color);
+  margin-bottom: calc(var(--spacing) / 2);
+}
+
+.subtitle {
+  margin: calc(var(--spacing)) 0;
+  color: var(--subtitle-color);
+  font-size: 25px;
+}
+
+.subtitle, .paragraph {
+  text-align: left;
+}
+
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.image-container img {
+  margin: 0 var(--spacing);
+  width: 250px;
+  border: 5px solid var(--Very-dark-blue-line);
+}
+
+.curiosities {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.curiosities img {
+  width: 100%;
+}
+
+.container-footer {
+  padding: var(--spacing);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(images/paisaje.avif);
+  background-position: bottom;
+  background-attachment: fixed;
+  color: var(--White);
+  height: 18em;
+}
+
+.container-footer i {
+  font-size: 70px;
+  color: var(--White);
+  transition: .2s;
+}
+
+.social-networks {
+  margin-top: var(--spacing);
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.social-networks i:hover {
+  cursor: pointer;
+  font-size: 60px;
+}
+
+.social-networks i:active {
+  color: rgb(163, 163, 163);
+}
+
+@media screen and (max-width: 910px) {
+  .image-container img {
+    margin-bottom: var(--spacing);
+  }
+}
+
+@media screen and (max-width: 420px) {
+  h1 {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 345px) {
+  .menu-nav {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 310px) {
+  .container-footer {
+    height: 25em;
+  }
+
+  .social-networks {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .social-networks i {
+    margin-bottom: var(--spacing);
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .menu-nav {
+    height: 150px;
+  }
+}
